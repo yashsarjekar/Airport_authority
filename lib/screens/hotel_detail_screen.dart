@@ -63,8 +63,10 @@ class _HotelDetailScreenState extends State<HotelDetailScreen> {
     return Container(
       color: Colors.white,
       child: CustomScrollView(
+        
         slivers: <Widget>[
           SliverAppBar(
+            iconTheme: Theme.of(context).iconTheme,
             expandedHeight: 300,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
@@ -72,6 +74,7 @@ class _HotelDetailScreenState extends State<HotelDetailScreen> {
                 loadedhotel.hotelname,
                 style: TextStyle(color: Colors.white),
               ),
+              
               background: Hero(
                 tag: loadedhotel.id,
                 child: Carousel(

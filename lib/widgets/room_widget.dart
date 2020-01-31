@@ -92,6 +92,141 @@ class _RoomWidgetState extends State<RoomWidget> {
 
     return Column(
       children: <Widget>[
+        
+        Container(
+          height: 200,
+          width: 330,
+          padding: EdgeInsets.all(10),
+          child: Card(
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text('Type of Room: AC'),
+                    Checkbox(
+                      value: _ac,
+                      onChanged: (bool value) {
+                        setState(() {
+                          if (_noAc != true) {
+                            _ac = !_ac;
+                          }
+                        });
+                      },
+                    )
+                  ],
+                ),
+                Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Text('Animities'),
+                        Text('Rs-/'+widget.acprice.toString()),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        FlatButton.icon(
+                          icon: Icon(Icons.tv),
+                          label: Text('TV'),
+                          onPressed: () {},
+                        ),
+                        FlatButton.icon(
+                          icon: Icon(Icons.wifi),
+                          label: Text('Wifi'),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        FlatButton.icon(
+                          icon: Icon(Icons.tv),
+                          label: Text('Room Servies'),
+                          onPressed: () {},
+                        ),
+                        FlatButton.icon(
+                          icon: Icon(Icons.hotel),
+                          label: Text('double Bed'),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+        Container(
+          height: 200,
+          width: 330,
+          padding: EdgeInsets.all(10),
+          child: Card(
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text('Type of Room: Non AC'),
+                    Checkbox(
+                      value: _noAc,
+                      onChanged: (bool value) {
+                        setState(() {
+                          if (_ac != true) {
+                            _noAc = !_noAc;
+                          }
+                        });
+                      },
+                    )
+                  ],
+                ),
+                Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Text('Animities'),
+                        Text('Rs-/' + widget.nonacprice.toString()),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        FlatButton.icon(
+                          icon: Icon(Icons.tv),
+                          label: Text('TV'),
+                          onPressed: () {},
+                        ),
+                        FlatButton.icon(
+                          icon: Icon(Icons.wifi),
+                          label: Text('Wifi'),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        FlatButton.icon(
+                          icon: Icon(Icons.tv),
+                          label: Text('Room Servies'),
+                          onPressed: () {},
+                        ),
+                        FlatButton.icon(
+                          icon: Icon(Icons.hotel),
+                          label: Text('double Bed'),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
         Card(
           child: Container(
             width: 320,
@@ -162,138 +297,6 @@ class _RoomWidgetState extends State<RoomWidget> {
             ),
           ),
         ),
-        Container(
-          height: 200,
-          width: 320,
-          padding: EdgeInsets.all(10),
-          child: Card(
-            child: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text('Type of Room: AC'),
-                    Checkbox(
-                      value: _ac,
-                      onChanged: (bool value) {
-                        setState(() {
-                          if (_noAc != true) {
-                            _ac = !_ac;
-                          }
-                        });
-                      },
-                    )
-                  ],
-                ),
-                Divider(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Text('Animities'),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        FlatButton.icon(
-                          icon: Icon(Icons.tv),
-                          label: Text('TV'),
-                          onPressed: () {},
-                        ),
-                        FlatButton.icon(
-                          icon: Icon(Icons.wifi),
-                          label: Text('Wifi'),
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        FlatButton.icon(
-                          icon: Icon(Icons.tv),
-                          label: Text('Room Servies'),
-                          onPressed: () {},
-                        ),
-                        FlatButton.icon(
-                          icon: Icon(Icons.hotel),
-                          label: Text('double Bed'),
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-        Container(
-          height: 200,
-          width: 320,
-          padding: EdgeInsets.all(10),
-          child: Card(
-            child: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text('Type of Room: Non AC'),
-                    Checkbox(
-                      value: _noAc,
-                      onChanged: (bool value) {
-                        setState(() {
-                          if (_ac != true) {
-                            _noAc = !_noAc;
-                          }
-                        });
-                      },
-                    )
-                  ],
-                ),
-                Divider(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Text('Animities'),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        FlatButton.icon(
-                          icon: Icon(Icons.tv),
-                          label: Text('TV'),
-                          onPressed: () {},
-                        ),
-                        FlatButton.icon(
-                          icon: Icon(Icons.wifi),
-                          label: Text('Wifi'),
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        FlatButton.icon(
-                          icon: Icon(Icons.tv),
-                          label: Text('Room Servies'),
-                          onPressed: () {},
-                        ),
-                        FlatButton.icon(
-                          icon: Icon(Icons.hotel),
-                          label: Text('double Bed'),
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        )
       ],
     );
   }

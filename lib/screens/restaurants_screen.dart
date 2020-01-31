@@ -7,7 +7,8 @@ class RestaurantScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Smart Traveller'),
+        title: Text('Smart Traveller',style: TextStyle(color: Colors.white),),
+        iconTheme: Theme.of(context).iconTheme,
       ),
       drawer: AppDrawer(),
       body: RestaurantGrid(),

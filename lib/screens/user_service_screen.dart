@@ -31,7 +31,8 @@ class _UserServiceScreenState extends State<UserServiceScreen> {
   }
     return Scaffold(
       appBar: AppBar(
-        title: Text('Smart Traveller'),
+        title: Text('Smart Traveller',style: TextStyle(color: Colors.white),),
+        iconTheme: Theme.of(context).iconTheme,
       ),
       body: SingleChildScrollView(
               child: Container(

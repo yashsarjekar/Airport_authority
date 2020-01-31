@@ -15,7 +15,8 @@ class _BookingScreenState extends State<BookingScreen> {
     final _loadedData = Provider.of<BookingDetailsProvider>(context).booking; 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Smart Traveller'),
+        title: Text('Smart Traveller',style: TextStyle(color: Colors.white),),
+        iconTheme: Theme.of(context).iconTheme,
       ),
       drawer: AppDrawer(),
       body: ListView.builder(

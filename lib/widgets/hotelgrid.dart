@@ -25,13 +25,6 @@ class HotelGrid extends StatelessWidget {
         ),
         footer: GridTileBar(
           backgroundColor: Colors.black54,
-          leading: IconButton(
-            icon: Icon(Icons.favorite_border),
-            onPressed: () {
-              //product.toggleisFavourite(authData.token, authData.userId);
-            },
-            color: Theme.of(context).accentColor,
-          ),
           title: Text(
             hotel.hotelname,
             textAlign: TextAlign.center,
